@@ -1,12 +1,13 @@
 # Lucky Number Guess
 
-A simple guessing game built with plain HTML, CSS, and JavaScript.
+A simple lotto-style mini game built with plain HTML, CSS, and JavaScript.
 
 ## How it works
-- Enter 3 numbers between -9 and 9
-- Click Enter or press Enter on the keyboard
-- The app randomly generates 3 winning numbers
-- It compares your guesses to the winning numbers and shows the result
+- The system already generates 3 winning numbers before you play.
+- Enter 3 numbers from -9 to 9 into the three boxes.
+- Press Enter or click the Enter button.
+- Your picks are compared to the hidden winning numbers.
+- The result reveals how many matches you got and which positions matched.
 
 ## Run it locally
 1. Open `index.html` in a browser, or
