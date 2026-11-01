@@ -8,13 +8,13 @@ const statusText = document.getElementById('status');
 const winningNumbers = [-1, 0, 1];
 
 function getGuessValues() {
-  return guessInputs.map((input) => Number(input.value));
+  return guessInputs.map((input) => input.value.trim());
 }
 
 function updateTicketOutput() {
   const values = getGuessValues();
 
-  if (values.some((value) => Number.isNaN(value))) {
+  if (values.some((value) => value === '')) {
     ticketOutput.value = 'Waiting for your 3 numbers...';
     return;
   }
@@ -23,14 +23,16 @@ function updateTicketOutput() {
 }
 
 function validateGuesses() {
-  const guesses = getGuessValues();
+  const rawValues = getGuessValues();
 
-  if (guesses.some((value) => Number.isNaN(value))) {
+  if (rawValues.some((value) => value === '')) {
     statusText.textContent = 'Please enter all 3 numbers.';
     return null;
   }
 
-  if (guesses.some((value) => value < -9 || value > 9)) {
+  const guesses = rawValues.map((value) => Number(value));
+
+  if (guesses.some((value) => Number.isNaN(value) || value < -9 || value > 9)) {
     statusText.textContent = 'Each number must be between -9 and 9.';
     return null;
   }
@@ -58,7 +60,7 @@ function revealResult(guesses) {
     `Winning numbers: ${winningNumbers.join(' | ')}`,
     `Your numbers: ${guesses.join(' | ')}`,
     comparison.count === 3
-      ? 'Jackpot! You matched all 3 numbers.'
+      ? 'Congratulations! You matched all 3 winning numbers!'
       : comparison.count > 0
         ? `You matched ${comparison.count} number(s).`
         : 'No exact matches this round.',
@@ -70,7 +72,7 @@ function revealResult(guesses) {
   resultOutput.value = resultLines.join('\n');
 
   if (comparison.count === 3) {
-    statusText.textContent = 'Winner winner! You hit the jackpot.';
+    statusText.textContent = 'Congratulations! You won!';
   } else if (comparison.count > 0) {
     statusText.textContent = 'Nice try. The draw is revealed.';
   } else {
