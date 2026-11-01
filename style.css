@@ -8,66 +8,65 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #f8fafc, #e0f2fe, #f5f3ff);
+  background: linear-gradient(135deg, #f8fafc, #dbeafe, #f5f3ff);
   color: #1f2937;
 }
 
 .card {
   background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-  width: min(90vw, 430px);
-  padding: 2rem 1.5rem;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+  padding: 2rem 2.5rem;
+  text-align: center;
+  width: min(90vw, 360px);
 }
 
 h1 {
-  text-align: center;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-size: 2rem;
 }
 
-.guess-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-label {
-  display: block;
+.target-label {
+  margin: 0;
+  font-size: 0.85rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 
-.guess-input {
-  width: 100%;
-  margin-top: 0.35rem;
-  border: 2px solid #d1d5db;
-  border-radius: 10px;
-  padding: 0.85rem 0.9rem;
-  font-size: 1.2rem;
-  text-align: center;
+.target,
+.count {
+  margin: 0.25rem 0 1rem;
 }
 
-.guess-input:focus {
-  outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+.target {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7c3aed;
 }
 
-.controls {
+.count {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  margin: 1.25rem 0;
+  flex-wrap: wrap;
 }
 
 .btn {
   border: none;
   border-radius: 10px;
-  padding: 0.8rem 1.25rem;
-  cursor: pointer;
+  padding: 0.8rem 1.2rem;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -80,36 +79,22 @@ label {
 }
 
 .primary {
-  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  background: #2563eb;
   color: white;
 }
 
+.secondary {
+  background: #e0e7ff;
+  color: #1e3a8a;
+}
+
 .neutral {
-  background: #e5e7eb;
-  color: #1f2937;
-}
-
-.output-label {
-  display: block;
-  margin-top: 0.75rem;
-  margin-bottom: 0.35rem;
-}
-
-.ticket-output,
-.result-output {
-  width: 100%;
-  min-height: 90px;
-  resize: vertical;
-  border: 2px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 0.8rem 0.9rem;
-  background: #f9fafb;
-  font-size: 1rem;
+  background: #f3f4f6;
+  color: #374151;
 }
 
 .status {
-  margin: 1rem 0 0;
-  text-align: center;
+  margin: 1.25rem 0 0;
   font-weight: 700;
   min-height: 24px;
   color: #374151;

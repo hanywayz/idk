@@ -3,42 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucky Number Guess</title>
+    <title>Target Counter Challenge</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="card">
-      <h1>Lucky Number Guess</h1>
+      <h1>Target Counter</h1>
 
-      <div class="guess-grid">
-        <label>
-          Number 1
-          <input id="guess-1" class="guess-input" type="number" min="-9" max="9" placeholder="-9 to 9" />
-        </label>
+      <p class="target-label">Target</p>
+      <p id="target" class="target">0</p>
 
-        <label>
-          Number 2
-          <input id="guess-2" class="guess-input" type="number" min="-9" max="9" placeholder="-9 to 9" />
-        </label>
+      <p id="count" class="count">0</p>
 
-        <label>
-          Number 3
-          <input id="guess-3" class="guess-input" type="number" min="-9" max="9" placeholder="-9 to 9" />
-        </label>
+      <div class="buttons">
+        <button id="decrease" class="btn secondary">-1</button>
+        <button id="reset" class="btn neutral">Reset</button>
+        <button id="increase" class="btn primary">+1</button>
       </div>
 
-      <div class="controls">
-        <button id="enter-button" class="btn primary">Enter</button>
-        <button id="reset-button" class="btn neutral">Reset</button>
-      </div>
-
-      <label class="output-label" for="ticket-output">Your picks</label>
-      <textarea id="ticket-output" class="ticket-output" readonly>Waiting for your 3 numbers...</textarea>
-
-      <label class="output-label" for="result-output">Winning numbers</label>
-      <textarea id="result-output" class="result-output" readonly>Reveal will appear after you hit Enter.</textarea>
-
-      <p id="status" class="status">A lucky draw is already locked in. Pick 3 numbers and hit Enter.</p>
+      <p id="status" class="status">Reach the target number!</p>
     </main>
 
     <script src="app.js"></script>

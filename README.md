@@ -1,13 +1,12 @@
-# Lucky Number Guess
+# Target Counter Challenge
 
-A simple lotto-style mini game built with plain HTML, CSS, and JavaScript.
+A simple mini game built from the original counter layout.
 
 ## How it works
-- The system winning numbers are fixed at -1, 0, and 1.
-- Enter 3 numbers from -9 to 9 into the three boxes.
-- Press Enter or click the Enter button.
-- Your picks are compared to the fixed winning numbers.
-- The result reveals how many matches you got and which positions matched.
+- A random target number is chosen.
+- You use the +1 and -1 buttons to move the counter.
+- If the counter reaches the target, you win.
+- Press Reset to start a new round.
 
 ## Run it locally
 1. Open `index.html` in a browser, or
