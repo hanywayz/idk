@@ -3,19 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Counter</title>
+    <title>Lucky Number Guess</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="card">
-      <h1>Mini Counter</h1>
-      <p id="count" class="count">0</p>
+      <h1>Lucky Number Guess</h1>
 
-      <div class="buttons">
-        <button id="decrease" class="btn secondary">-1</button>
-        <button id="reset" class="btn neutral">Reset</button>
-        <button id="increase" class="btn primary">+1</button>
+      <div class="guess-grid">
+        <label>
+          Number 1
+          <input id="guess-1" class="guess-input" type="number" min="-9" max="9" value="" placeholder="-9 to 9" />
+        </label>
+
+        <label>
+          Number 2
+          <input id="guess-2" class="guess-input" type="number" min="-9" max="9" value="" placeholder="-9 to 9" />
+        </label>
+
+        <label>
+          Number 3
+          <input id="guess-3" class="guess-input" type="number" min="-9" max="9" value="" placeholder="-9 to 9" />
+        </label>
       </div>
+
+      <div class="controls">
+        <button id="enter-button" class="btn primary">Enter</button>
+        <button id="reset-button" class="btn neutral">Reset</button>
+      </div>
+
+      <label class="output-label" for="ticket-output">Your picks</label>
+      <textarea id="ticket-output" class="ticket-output" readonly>Waiting for your 3 numbers...</textarea>
+
+      <label class="output-label" for="result-output">Winning numbers</label>
+      <textarea id="result-output" class="result-output" readonly>Results will appear here...</textarea>
+
+      <p id="status" class="status">Pick 3 numbers between -9 and 9.</p>
     </main>
 
     <script src="app.js"></script>

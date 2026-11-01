@@ -1,15 +1,16 @@
-# Mini Counter App
+# Lucky Number Guess
 
-A tiny front-end project built with plain HTML, CSS, and JavaScript.
+A simple guessing game built with plain HTML, CSS, and JavaScript.
 
-## Features
-- Increment the counter
-- Decrement the counter
-- Reset the value to zero
+## How it works
+- Enter 3 numbers between -9 and 9
+- Click Enter or press Enter on the keyboard
+- The app randomly generates 3 winning numbers
+- It compares your guesses to the winning numbers and shows the result
 
 ## Run it locally
 1. Open `index.html` in a browser, or
-2. Serve the folder with a simple local server:
+2. Serve the folder with a local web server:
 
 ```bash
 python3 -m http.server 8000
