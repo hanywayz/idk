@@ -103,15 +103,21 @@ h1 {
   color: #1f2937;
 }
 
-.status {
-  margin: 1.25rem 0 0;
+.status,
+.score,
+.streak,
+.timer {
+  margin: 0.75rem 0 0;
   font-weight: 700;
+}
+
+.status {
   min-height: 24px;
   color: #374151;
 }
 
-.score {
-  margin: 0.75rem 0 0;
-  font-weight: 700;
+.score,
+.streak,
+.timer {
   color: #111827;
 }
