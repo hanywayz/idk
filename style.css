@@ -53,11 +53,16 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.buttons {
+.buttons,
+.secondary-controls {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+.secondary-controls {
+  margin-top: 0.75rem;
 }
 
 .btn {
@@ -93,9 +98,20 @@ h1 {
   color: #374151;
 }
 
+.accent {
+  background: #f59e0b;
+  color: #1f2937;
+}
+
 .status {
   margin: 1.25rem 0 0;
   font-weight: 700;
   min-height: 24px;
   color: #374151;
+}
+
+.score {
+  margin: 0.75rem 0 0;
+  font-weight: 700;
+  color: #111827;
 }
