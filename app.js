@@ -17,7 +17,13 @@ let timeLeft = 10;
 let timerId = null;
 
 function randomTarget() {
-  return Math.floor(Math.random() * 21) - 10;
+  let nextTarget = 0;
+
+  while (nextTarget === 0) {
+    nextTarget = Math.floor(Math.random() * 19) - 9;
+  }
+
+  return nextTarget;
 }
 
 function render() {
@@ -38,6 +44,7 @@ function stopTimer() {
 function startTimer() {
   stopTimer();
   timeLeft = 10;
+
   timerId = setInterval(() => {
     timeLeft -= 1;
     render();
@@ -60,6 +67,11 @@ function checkWin() {
     statusElement.textContent = 'You win! Great job!';
     statusElement.style.color = '#16a34a';
     render();
+
+    setTimeout(() => {
+      newRound();
+    }, 700);
+
     return true;
   }
 
